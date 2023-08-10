@@ -1,10 +1,7 @@
-
--- File: create_users_table.sql
--- Description: This script creates the 'users' table in the database.
-
--- Create a new table called "users"
+-- Creates users table.
 CREATE TABLE IF NOT EXISTS users (
-	id INT, 
-	email VARCHAR(255),
-	name VARCHAR(255)
-	);
+    id INT NOT NULL AUTO_INCREMENT,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    name VARCHAR(255),
+    PRIMARY KEY (id)
+);
